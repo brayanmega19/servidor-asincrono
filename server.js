@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 
-// Define the request handler function
+// Se crea la arrow function requestHandler
 const requestHandler = (request, response) => {
 
   // Simulate an asynchronous operation with setTimeout
@@ -16,13 +16,13 @@ const requestHandler = (request, response) => {
         response.end(data);
       }
     });
-  }, 2000); // Delay for 2 seconds
+  }, 2000); // Aqui hay un retraso de dos segundos
 };
 
-// Create the server
+// Se crea el servidor
 const server = http.createServer(requestHandler);
 
-// Start listening on port 3021
+//Se utiliza el puerto 3021
 server.listen(3021, (err) => {
   if (err) {
     console.error('Error starting server:', err);
